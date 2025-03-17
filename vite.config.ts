@@ -4,18 +4,23 @@ import path from "path";
 import {componentTagger} from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/eaglerest_crm/" : "/",  // Укажи имя репо
+  base: "/eaglerest_crm/",  // Убедись, что тут имя репозитория!
+  build: {
+    outDir: "dist",
+    assetsDir: "assets", // Указывает, куда складывать статические файлы
+  },
   server: {
     host: "::",
     port: 8080,
   },
-  plugins: [
-    react(),
-    mode === "development" && componentTagger(),
-  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(),
+  ].filter(Boolean),
 }));
+
