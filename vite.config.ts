@@ -4,7 +4,7 @@ import path from "path";
 import {componentTagger} from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/greegi.github.io/" : "/",  // Укажи имя репо
+  base: mode === "production" ? "/eaglerest_crm/" : "/",  // Укажи имя репо
   server: {
     host: "::",
     port: 8080,
