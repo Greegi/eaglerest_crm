@@ -9,7 +9,7 @@ import {
   FileText, 
   Book, 
   Bookmark, 
-  Trademark 
+  Copyright 
 } from 'lucide-react';
 
 interface SidebarLinkProps {
@@ -109,7 +109,7 @@ const Layout = ({ children }: LayoutProps) => {
           
           <SidebarLink 
             to="/trademark-names" 
-            icon={<Trademark size={18} />} 
+            icon={<Copyright size={18} />} 
             isActive={location.pathname === '/trademark-names'}>
             Trademark Names
           </SidebarLink>
