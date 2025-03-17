@@ -18,6 +18,16 @@ interface DealsTableProps {
 }
 
 const DealsTable: React.FC<DealsTableProps> = ({ deals }) => {
+  // Функция для определения варианта бейджа на основе этапа сделки
+  const getBadgeVariant = (stage: string) => {
+    switch (stage) {
+      case 'Закрыто':
+        return 'default';
+      default:
+        return 'secondary';
+    }
+  };
+
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -44,7 +54,7 @@ const DealsTable: React.FC<DealsTableProps> = ({ deals }) => {
                   <td className="p-4 align-middle">{deal.value}</td>
                   <td className="p-4 align-middle">
                     <Badge 
-                      variant={deal.stage === 'Closed' ? 'default' : 'secondary'}
+                      variant={getBadgeVariant(deal.stage)}
                       className="whitespace-nowrap"
                     >
                       {deal.stage}
