@@ -65,8 +65,8 @@ const Layout = ({ children }: LayoutProps) => {
       {/* Sidebar */}
       <div className="w-64 flex-shrink-0 border-r border-border bg-card/50 backdrop-blur-sm">
         <div className="p-6">
-          <h1 className="text-xl font-semibold tracking-tight">System</h1>
-          <p className="text-sm text-muted-foreground">Information management</p>
+          <h1 className="text-xl font-semibold tracking-tight">Система</h1>
+          <p className="text-sm text-muted-foreground">Управление информацией</p>
         </div>
         
         <Separator className="mb-4" />
@@ -76,14 +76,14 @@ const Layout = ({ children }: LayoutProps) => {
             to="/" 
             icon={<FileText size={18} />} 
             isActive={location.pathname === '/'}>
-            Base
+            Главная
           </SidebarLink>
           
           <SidebarLink 
             to="/clients" 
             icon={<Users size={18} />} 
             isActive={location.pathname === '/clients'}>
-            Clients
+            Клиенты
           </SidebarLink>
           
           <SidebarLink 
@@ -97,21 +97,21 @@ const Layout = ({ children }: LayoutProps) => {
             to="/knowledge-base" 
             icon={<Book size={18} />} 
             isActive={location.pathname === '/knowledge-base'}>
-            Knowledge Base
+            База Знаний
           </SidebarLink>
           
           <SidebarLink 
             to="/notes" 
             icon={<Bookmark size={18} />} 
             isActive={location.pathname === '/notes'}>
-            Notes
+            Заметки
           </SidebarLink>
           
           <SidebarLink 
             to="/trademark-names" 
             icon={<Copyright size={18} />} 
             isActive={location.pathname === '/trademark-names'}>
-            Trademark Names
+            Торговые Марки
           </SidebarLink>
         </nav>
       </div>
